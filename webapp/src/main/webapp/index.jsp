@@ -113,10 +113,10 @@
             <h2>Profiles</h2>
             <!-- Display user profiles here -->
             <div class="profile">
-                <h3>Name: John Doe</h3>
+                <h3>Name: Harish B</h3>
                 <p>Age: 30</p>
                 <p>Gender: Male</p>
-                <p>Location: New York, USA</p>
+                <p>Location: Texas, USA</p>
             </div>
             <!-- Add more profiles here -->
         </section>
