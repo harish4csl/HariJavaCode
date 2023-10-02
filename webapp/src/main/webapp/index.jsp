@@ -4,58 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration and Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Matrimonial Web App</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .profile {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Matrimonial Web App</h1>
+    </header>
     <div class="container">
-        <form id="registrationForm" class="form">
+        <section id="registration-section">
             <h2>Registration</h2>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="qualification">Qualification:</label>
-                <input type="text" id="qualification" name="qualification" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Register</button>
-            </div>
-        </form>
+            <form id="registrationForm" class="form">
+                <!-- Registration form fields -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </section>
 
-        <form id="loginForm" class="form">
-            <h2>Login</h2>
-            <div class="form-group">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" name="loginUsername" required>
+        <section id="profile-list">
+            <h2>Profiles</h2>
+            <!-- Display user profiles here -->
+            <div class="profile">
+                <h3>Name: John Doe</h3>
+                <p>Age: 30</p>
+                <p>Gender: Male</p>
+                <p>Location: New York, USA</p>
             </div>
-            <div class="form-group">
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
-            </div>
-            <div class="form-group">
-                <button type="submit">Login</button>
-            </div>
-        </form>
+            <!-- Add more profiles here -->
+        </section>
     </div>
-    <script src="script.js"></script>
+    <script>
+        // JavaScript code for form submission and profile listing
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            const location = document.getElementById('location').value;
+
+            // You can add logic to create and display user profiles here
+
+            // For simplicity, we'll just log the values for now
+            console.log(`Name: ${name}, Age: ${age}, Gender: ${gender}, Location: ${location}`);
+        });
+    </script>
 </body>
 </html>
 
